@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#18241d">
+    <meta name="description" content="Haz tu pedido en Summun, cocina peruana.">
+    <title>Pedidos | Summun</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+
+    <header class="form-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">S</span>
+            <span>SUMMUN<small>COCINA PERUANA</small></span>
+        </a>
+
+        <a class="back-link" href="index.html">← Volver al inicio</a>
+    </header>
+
+    <main class="booking-layout">
+
+        <section class="booking-intro">
+            <p class="eyebrow"><span></span> PEDIDOS SUMMUN</p>
+
+            <h1>
+                Tu antojo,
+                <br>
+                listo para <em>compartir.</em>
+            </h1>
+
+            <p>
+                Completa el formulario con lo que deseas pedir.
+                Al enviarlo, se abrirá WhatsApp con el detalle de tu pedido
+                para confirmar disponibilidad, dirección y forma de pago.
+            </p>
+
+            <div class="booking-hours">
+                <span>HORARIO DE PEDIDOS</span>
+                <p>
+                    Lunes a domingo
+                    <br>
+                    12:00 p. m. – 10:00 p. m.
+                </p>
+            </div>
+
+            <div class="booking-decoration">S</div>
+        </section>
+
+        <section class="form-panel">
+
+            <p class="form-step">PEDIDO <span>·</span> 01</p>
+            <h2>Haz tu pedido</h2>
+            <p class="form-lead">Déjanos tus datos y selecciona lo que deseas.</p>
+
+            <form id="booking-form">
+
+                <div class="field-row">
+
+                    <label>
+                        Nombre completo
+                        <input name="nombre" type="text" placeholder="¿Cómo te llamas?" required>
+                    </label>
+
+                    <label>
+                        Teléfono
+                        <input name="telefono" type="tel" inputmode="tel" placeholder="999 999 999" required>
+                    </label>
+
+                </div>
+
+                <div class="field-row">
+
+                    <label>
+                        Plato principal
+                        <select name="plato" required>
+                            <option value="" disabled selected>Selecciona un plato</option>
+                            <option>Ceviche clásico — S/ 25</option>
+                            <option>Lomo saltado — S/ 28</option>
+                            <option>Causa rellena — S/ 20</option>
+                            <option>Ají de gallina — S/ 24</option>
+                            <option>Papa a la huancaína — S/ 18</option>
+                            <option>Anticuchos — S/ 22</option>
+                            <option>Tallarines verdes — S/ 23</option>
+                            <option>Pachamanca — S/ 32</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Cantidad
+                        <select name="cantidad" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7 o más</option>
+                        </select>
+                    </label>
+
+                </div>
+
+                <div class="field-row">
+
+                    <label>
+                        Modalidad
+                        <select name="modalidad" id="modalidad" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option value="Delivery">Delivery</option>
+                            <option value="Recojo en local">Recojo en local</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Método de pago
+                        <select name="pago" required>
+                            <option value="" disabled selected>Selecciona</option>
+                            <option>Yape</option>
+                            <option>Plin</option>
+                            <option>Efectivo</option>
+                        </select>
+                    </label>
+
+                </div>
+
+                <label id="direccion-field">
+                    Dirección de entrega
+                    <input name="direccion" id="direccion" type="text" placeholder="Av., calle, número y referencia">
+                </label>
+
+                <label>
+                    Comentarios del pedido
+                    <span class="optional">OPCIONAL</span>
+                    <textarea name="comentario" rows="3" placeholder="Sin cebolla, salsa aparte, referencia, etc."></textarea>
+                </label>
+
+                <button class="submit-button" type="submit">
+                    Enviar pedido por WhatsApp
+                    <span>↗</span>
+                </button>
+
+                <p class="form-note">
+                    El pedido se enviará a WhatsApp para confirmar disponibilidad,
+                    precio final, dirección y entrega.
+                </p>
+
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="form-footer">
+        <a href="index.html">SUMMUN · COCINA PERUANA</a>
+        <span>HECHO CON ORGULLO EN PERÚ</span>
+    </footer>
+
+    <script src="formulario.js"></script>
+</body>
+</html>
